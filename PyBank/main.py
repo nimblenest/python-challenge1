@@ -49,13 +49,13 @@ print(f"Greatest Increase in Profits: {max_increase_date} (${max_increase:.0f})"
 print(f"Greatest Decrease in Profits: {max_decrease_date} (${max_decrease:.0f})")
 
  
-with open("financial_analysis.txt", "w") as txt_file:
-    txt_file.write("Financial Analysis\n")
-    txt_file.write("----------------------------\n")
-    txt_file.write(f"Total Months: {total_months}\n")
-    txt_file.write(f"Total: ${total_profit_losses:.0f}\n")
-    txt_file.write(f"Average Change: ${average_change:.2f}\n")
-    txt_file.write(f"Greatest Increase in Profits: {max_increase_date} (${max_increase:.0f})\n")
-    txt_file.write(f"Greatest Decrease in Profits: {max_decrease_date} (${max_decrease:.0f})\n")
-
-    
+results=(
+    f"Financial Analysis\n"
+    f"----------------------------\n"
+    f"Total Months: {total_months}\n"
+    f"Total: ${total_profit_losses:.0f}\n"
+    f"Average Change: ${average_change:.2f}\n"
+    f"Greatest Increase in Profits: {max_increase_date} (${max_increase:.0f})\n"
+    f"Greatest Decrease in Profits: {max_decrease_date} (${max_decrease:.0f})\n")
+with open("analysis/financial_analysis.txt", "w") as txt_file:
+    txt_file.write(results)
